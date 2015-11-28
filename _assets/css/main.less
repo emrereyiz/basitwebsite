@@ -1,0 +1,53 @@
+/* less var start */
+@sBlue: #1a3f7c;
+@cWhite: #fff;
+@cBlack: #000;
+@l: left;
+@r: right;
+/* less var end */
+
+/* global */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+ul, p, h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+/* global */
+
+body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'}
+	#wrapper{}
+		#wrapper{
+			#header{border:solid 1px red;
+				width:100%;
+				display: block;
+				#headerInner{
+					width:960px;
+					margin: 0 auto;
+					.logo{
+						background-image:url('../img/yk-kobi.png');
+						display:inline-block;
+						width:120px;
+						height: 60px;
+					}
+					ul#topMenu{
+						width:500px;
+						display: inline-block;
+						li{
+							border-left:solid 1px rgba(255,255,255,.3);
+							float: @l;
+							&:hover{
+								color:red;
+							}
+							&:first-child{
+								border-left:none;
+							}
+							a{
+								color:@cWhite;
+								float:@l;
+								padding:20px;
+								font-size:18px;
+							}
+						}
+					}
+				}
+			}
+		}
