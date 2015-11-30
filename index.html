@@ -29,9 +29,18 @@
           // itemsMobile : false
      
       });
-     
+
+     $("#owl-demo").on("translate.owl.carousel", function(n) {
+     	alert("tes")
+        var t = $(".banner .owl-item").eq(n.item.index);
+        $(".banner .banner-text").removeClass("animated fadeInDown");
+        $(".banner .banner-img").removeClass("animated fadeInRight");
+        t.find(".banner-text").addClass("animated fadeInDown");
+        t.find(".banner-img").addClass("animated fadeInRight")
     });
 
+
+    });
 
 	</script>
 </head>
@@ -65,21 +74,43 @@
 	<div class="clr"></div>
 	<div id="bannerContent">
 		<div id="pageInner">
-
-
-			<div id="bannerItems">
-
-
-    <div id="owl-demo" class="owl-carousel owl-theme">
-     
-      <div class="item"><img src="_assets/img/banner/01.jpg" alt="test"></div>
-      <div class="item"><img src="_assets/img/banner/02.jpg" alt="test"></div>
-      <div class="item"><img src="_assets/img/banner/03.jpg" alt="test"></div>
-      <div class="item"><img src="_assets/img/banner/04.jpg" alt="test"></div>
-      <div class="item"><img src="_assets/img/banner/05.jpg" alt="test"></div>
-     
-    </div>
-			</div>
+		    <div id="owl-demo" class="owl-carousel owl-theme bannerItems">
+		      <div class="bannerItem">
+		      	<div class="itemContent">
+			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
+			      	<a href="#" class="itemImage"><img src="_assets/img/banner/01-item.png" alt="test"></a>
+		      	</div>
+		      	<div class="itemImageFull"><img src="_assets/img/banner/01.jpg" alt="test"></div>
+		      </div>
+		      <div class="bannerItem">
+		      	<div class="itemContent">
+			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
+			      	<a href="#" class="itemImage"><img src="_assets/img/banner/02-item.png" alt="test"></a>
+		      	</div>
+		      	<div class="itemImageFull"><img src="_assets/img/banner/02.jpg" alt="test"></div>
+		      </div>
+		      <div class="bannerItem">
+		      	<div class="itemContent">
+			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
+			      	<a href="#" class="itemImage"><img src="_assets/img/banner/03-item.png" alt="test"></a>
+		      	</div>
+		      	<div class="itemImageFull"><img src="_assets/img/banner/03.jpg" alt="test"></div>
+		      </div>
+		      <div class="bannerItem">
+		      	<div class="itemContent">
+			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
+			      	<a href="#" class="itemImage"><img src="_assets/img/banner/04-item.png" alt="test"></a>
+		      	</div>
+		      	<div class="itemImageFull"><img src="_assets/img/banner/04.jpg" alt="test"></div>
+		      </div>
+		      <div class="bannerItem">
+		      	<div class="itemContent">
+			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
+			      	<a href="#" class="itemImage"><img src="_assets/img/banner/05-item.png" alt="test"></a>
+		      	</div>
+		      	<div class="itemImageFull"><img src="_assets/img/banner/05.jpg" alt="test"></div>
+		      </div>
+		    </div>
 			<div id="loginContent">
 				<span class="loginTitle">ÜYE GİRİŞİ</span>
 				<div class="loginBottom">

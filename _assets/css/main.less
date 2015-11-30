@@ -17,6 +17,8 @@ r : right
 @w100: 100%;
 @pageSize: 960px;
 @mAuto: 0 auto;
+@abs: absolute;
+@rel: relative;
 /* less var end */
 
 /* global */
@@ -37,7 +39,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 			#header{
 				width:100%;
 				display: block;
-				position: relative;
+				position: @rel;
 				z-index: 2;
 				#headerInner *{float:left;}
 				#headerInner{
@@ -72,7 +74,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 					}
 					#topSearch{
 						display: @inblock;
-						position: relative;
+						position: @rel;
 						.mt10;
 						input{
 							width:240px;
@@ -90,7 +92,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 							width:23px;
 							height: 32px;
 							background:Red;
-							position: absolute;
+							position: @abs;
 							right: 0;
 							cursor: pointer;
 							margin:5px;
@@ -113,20 +115,30 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 			#bannerContent{
 				width: @pageSize;
 				margin: @mAuto;
-				#bannerItems{
+				.bannerItems{
 				height: 608px;
 				top:0;
 				left:0;
-				position: absolute;
+				position: @abs;
 				width: @w100;
 				background:green;
 					.bannerItem{
-
+						width: 100%;
+						position: @rel;
+						.itemContent{
+							width: 960px;
+							margin: 0 auto;
+						}
+						a{
+							position: @abs;
+						}
+						a.itemText{font-size:35px; color: @cWhite; margin:250px 0 0 0;}
+						a.itemImage{margin:250px 0 0 300px}
 					}
 				}
 				#loginContent{
 					float: right;
-					position: relative;
+					position: @rel;
 					width: 220px;
 					background: @cWhite;
 					border-radius: 2px;
@@ -210,7 +222,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 						}
 				}
 				#bannerInfo{
-					position: relative;;
+					position: @rel;;
 					margin-top: 70px;
 					.infoItem{
 						width: 50% - 1.5px;
