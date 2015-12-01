@@ -123,6 +123,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 				position: @abs;
 				width: @w100;
 				background:green;
+				/*overflow: hidden;*/
 					.bannerItem{
 						width: 100%;
 						position: @rel;
@@ -130,11 +131,18 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 							width: 960px;
 							margin: 0 auto;
 						}
+						.itemImageFull{
+							width:100%;
+							display: @inblock;
+								img{
+									width: 100%;
+								}
+						}
 						a{
 							position: @abs;
 						}
-						a.itemText{font-size:35px; color: @cWhite; margin:250px 0 0 0;}
-						a.itemImage{margin:250px 0 0 300px}
+						a.itemText{font-size:35px; color: @cWhite; margin:140px 0 0 0; font-weight: 500; letter-spacing: -1px; line-height: 1.1em;}
+						a.itemImage{margin:130px 0 0 300px;}
 					}
 				}
 				#loginContent{

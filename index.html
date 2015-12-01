@@ -13,14 +13,13 @@
 
 
     $(document).ready(function() {
-
-      $("#owl-demo").owlCarousel({
-     
+		var $owl = $('.owl-carousel');
+      	  $owl.owlCarousel({
           navigation : true, // Show next and prev buttons
           slideSpeed : 300,
           paginationSpeed : 400,
-          singleItem:true
-     
+          singleItem:true,
+          callbacks: true
           // "singleItem:true" is a shortcut for:
           // items : 1, 
           // itemsDesktop : false,
@@ -30,15 +29,11 @@
      
       });
 
-     $("#owl-demo").on("translate.owl.carousel", function(n) {
-     	alert("tes")
-        var t = $(".banner .owl-item").eq(n.item.index);
-        $(".banner .banner-text").removeClass("animated fadeInDown");
-        $(".banner .banner-img").removeClass("animated fadeInRight");
-        t.find(".banner-text").addClass("animated fadeInDown");
-        t.find(".banner-img").addClass("animated fadeInRight")
-    });
-
+      /* event */
+		$owl.on('changed.owl.carousel', function(event) {
+		    alert("sa")
+		})
+      /* event */
 
     });
 
