@@ -1,39 +1,37 @@
-<html>
+﻿<html>
 <head>
 	<title>Yapı Kredi KOBİ</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet/less" type="text/css" href="_assets/css/main.less" />
-	<link rel="stylesheet" type="text/css" href="_assets/css/owl.carousel.css" />
-	<link rel="stylesheet" type="text/css" href="_assets/css/owl.theme.css" />
-	<link rel="stylesheet" type="text/css" href="_assets/css/owl.transitions.css" />
+    <link rel="stylesheet" type="text/css" href="_assets/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="_assets/css/owl.theme.css" />
+    <link rel="stylesheet" type="text/css" href="_assets/css/owl.transitions.css" />
+    <link rel="stylesheet" type="text/css" href="_assets/css/animate.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js" type="text/javascript"></script>
 	<script src="_assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-	<script src="_assets/js/owl.carousel.js" type="text/javascript"></script>
+	<script src="_assets/js/owl.carousel.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 
 
-    $(document).ready(function() {
-		var $owl = $('.owl-carousel');
-      	  $owl.owlCarousel({
-          navigation : true, // Show next and prev buttons
-          slideSpeed : 300,
-          paginationSpeed : 400,
-          singleItem:true,
-          callbacks: true
-          // "singleItem:true" is a shortcut for:
-          // items : 1, 
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
-     
-      });
-
-      /* event */
-		$owl.on('changed.owl.carousel', function(event) {
-		    alert("sa")
-		})
-      /* event */
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".active .itemText").addClass("animated fadeInDown fadeIn");
+                $(".active .itemImage").addClass("animated fadeInRight fadeIn");
+            }, 1);
+            var removeClass = "animated fadeInDown fadeInRight";
+            $('.bannerItems').owlCarousel({
+                items:1,
+                autoplay:true,
+                autoplayTimeout:1000,
+            }).on('changed.owl.carousel', function (event) {
+                console.log($(".active").index());
+                // animated, fadeInRight, fadeInDown
+                setTimeout(function () {
+                    $(".itemText,.itemImage").removeClass(removeClass);
+                    $(".active .itemText").addClass("animated fadeInDown fadeIn");
+                    $(".active .itemImage").addClass("animated fadeInRight fadeIn");
+                }, 1)                
+            })
 
     });
 
@@ -69,7 +67,7 @@
 	<div class="clr"></div>
 	<div id="bannerContent">
 		<div id="pageInner">
-		    <div id="owl-demo" class="owl-carousel owl-theme bannerItems">
+		    <div class="bannerItems">
 		      <div class="bannerItem">
 		      	<div class="itemContent">
 			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
@@ -84,7 +82,7 @@
 		      	</div>
 		      	<div class="itemImageFull"><img src="_assets/img/banner/02.jpg" alt="test"></div>
 		      </div>
-		      <div class="bannerItem">
+                <div class="bannerItem">
 		      	<div class="itemContent">
 			      	<a href="#" class="itemText">Esnafa, KOBİ'ye<br>eşit taksitli kredi!<br>Üstelik şimdi al,<br>2016'da öde!</a>
 			      	<a href="#" class="itemImage"><img src="_assets/img/banner/03-item.png" alt="test"></a>
@@ -125,8 +123,16 @@
 			</div>
 			<div class="clr"></div>
 			<div id="bannerInfo">
-				<a href="#" class="infoLeft infoItem">1</a>
-				<a href="#" class="infoRight infoItem">2</a>
+				<a href="#" class="infoLeft infoItem">
+                    <span class="image"></span>
+                    KREDİ BAŞVURUSU
+                    Proje sizden, destek kredisi<br /> Yapı Kredi'den!
+                </a>
+				<a href="#" class="infoRight infoItem">
+                    BENİ ARAYIN
+                    Siz zahmet etmeyin hizmeti<br/>
+                    ayağınıza getirelim.
+                </a>
 			</div>
 		</div>
 	</div>

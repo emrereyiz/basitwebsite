@@ -126,16 +126,21 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 				/*overflow: hidden;*/
 					.bannerItem{
 						width: 100%;
+                        height:608px;
 						position: @rel;
 						.itemContent{
 							width: 960px;
 							margin: 0 auto;
+                            position:relative;
+                            z-index:1;
 						}
 						.itemImageFull{
 							width:100%;
 							display: @inblock;
+                            position:@abs;
 								img{
 									width: 100%;
+                                    height:100%;
 								}
 						}
 						a{
@@ -151,6 +156,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 					width: 220px;
 					background: @cWhite;
 					border-radius: 2px;
+                    z-index:1;
 						.loginTitle{
 							border-top-left-radius: 2px;
 							border-top-right-radius: 2px;
@@ -233,6 +239,7 @@ body{margin:0; padding:0; background-color: @sBlue; font-family: 'Roboto'; color
 				#bannerInfo{
 					position: @rel;
 					margin-top: 70px;
+                    z-index:1;
 					.infoItem{
 						width: 50% - 1.5px;
 						display: inline-block;
